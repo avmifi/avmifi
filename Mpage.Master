@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mpage.master.cs" Inherits="Shekels.Mpage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+      
+    </style>
+    <link href="CSS/master.css" rel="stylesheet" />
+
+</head>
+<body style="margin:0;">
+
+    <div class="navbar">
+        <ul style="margin:0; padding:0;" runat="server">
+            <li id="bar1" runat="server"><a href="Home.aspx">Home</a></li>
+            <li id="bar2" runat="server"><a href="SignUp.aspx">Sign Up</a></li>
+            <li id="bar3" runat="server"><a href="LogIn.aspx">Login</a></li>
+            <li id="bar4" runat="server"><a href="Coins.aspx">Coins</a></li>
+            <li id="bar5" runat="server"><a href="Notes.aspx">Notes</a></li>
+                        <li id="bar10" runat="server"><a href="currencyconventer.aspx">Convert</a></li>
+            <li id="bar6" runat="server"><a href="Admin.aspx">ADMIN :)</a></li>
+
+            <li style="float:right; width:100px; font-weight:bold; background-color:black; color:black; border-inline-start:white double"
+                runat="server">
+                <a href="Home.aspx" style="font-weight:lighter; align-items:center">₪</a></li>
+
+            <li class="user" style="text-align: left; border-inline-start:white double; background-color:black" runat="server">
+                   <a href="../Pages/Profile.aspx" style="            float: left;
+height: 37px;">  <%=Session["userName"] + " ›"%></a>
+
+            </li>  
+                        <li id="bar7" runat="server" style="float:right; text-align:center;background-color:black; border-inline-start:white double">
+                            <a href="LogOut.aspx" style="float:right;  height: 36px; background-color:black; border-inline-start:white double">Log out</a></li>
+
+        </ul>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div style="height:100px"></div>
+    <footer> <br /> <br />
+        <div class="textfoot" style=" margin:25px">
+        Aviv Michael Fishman's site <br /> 
+        Shekels website project</div>
+    </footer>
+</body>
+</html>

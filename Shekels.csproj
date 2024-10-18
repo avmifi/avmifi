@@ -1,0 +1,369 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{959D80AC-EAC9-44CA-A40E-24E1B961739A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shekels</RootNamespace>
+    <AssemblyName>Shekels</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44355</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\DataBase.mdf" />
+    <Content Include="App_Data\DataBase_log.ldf">
+      <DependentUpon>DataBase.mdf</DependentUpon>
+    </Content>
+    <Content Include="CSS\admin.css" />
+    <Content Include="CSS\BankNotes.css" />
+    <Content Include="CSS\Coins.css" />
+    <Content Include="CSS\conindex.css" />
+    <Content Include="CSS\currency.css" />
+    <Content Include="CSS\home.css" />
+    <Content Include="CSS\login.css" />
+    <Content Include="CSS\master.css" />
+    <Content Include="CSS\noaccess.css" />
+    <Content Include="CSS\notindex.css" />
+    <Content Include="CSS\open.css" />
+    <Content Include="CSS\profile.css" />
+    <Content Include="CSS\signup.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\convert.png" />
+    <Content Include="Images\gencoin.gif" />
+    <Content Include="Images\rotatingcoin.gif" />
+    <Content Include="Images\halfshekelv2.png" />
+    <Content Include="Images\tenagorotv2.png" />
+    <Content Include="Images\tenshekelsv2.png" />
+    <Content Include="Images\100s.jpg" />
+    <Content Include="Images\100v2.jpg" />
+    <Content Include="Images\200s.jpg" />
+    <Content Include="Images\200v2.jpg" />
+    <Content Include="Images\20s.jpg" />
+    <Content Include="Images\20v2.jpg" />
+    <Content Include="Images\fiveshekelsv2.png" />
+    <Content Include="Images\50s.jpg" />
+    <Content Include="Images\50v2.jpg" />
+    <Content Include="Images\agorot.png" />
+    <Content Include="Images\fiveshekel.png" />
+    <Content Include="Images\genbill.gif" />
+    <Content Include="Images\halfshekel.png" />
+    <Content Include="Images\oneshekel.png" />
+    <Content Include="Images\oneshekelv2.png" />
+    <Content Include="Images\shekel.png" />
+    <Content Include="Images\shekelsign.png" />
+    <Content Include="Images\shtarot.png" />
+    <Content Include="Images\tenshekel.png" />
+    <Content Include="Images\try3.png" />
+    <Content Include="Images\twoshekel.png" />
+    <Content Include="Images\usericon.png" />
+    <Content Include="Images\AvgNotes.png" />
+    <Content Include="Images\twoshekelsv2.png" />
+    <Content Include="Images\bgimg.png" />
+    <Content Include="JavaScript\JavaScript.js" />
+    <Content Include="Pages\Admin.aspx" />
+    <Content Include="Pages\Coins.aspx" />
+    <Content Include="Pages\CurrencyConventer.aspx" />
+    <Content Include="Pages\FiftyShekels.aspx" />
+    <Content Include="Pages\FiveShekels.aspx" />
+    <Content Include="Pages\GeneralKnowledgeCoins.aspx" />
+    <Content Include="Pages\GeneralKnowledgeNotes.aspx" />
+    <Content Include="Pages\HalfShekel.aspx" />
+    <Content Include="Pages\Home.aspx" />
+    <Content Include="Pages\HundredShekels.aspx" />
+    <Content Include="Pages\LogIn.aspx" />
+    <Content Include="Pages\LogOut.aspx" />
+    <Content Include="Pages\NoAccess.aspx" />
+    <Content Include="Pages\Notes.aspx" />
+    <Content Include="Pages\OneShekel.aspx" />
+    <Content Include="Pages\Open.aspx" />
+    <Content Include="Pages\Profile.aspx" />
+    <Content Include="Pages\SignUp.aspx" />
+    <Content Include="Pages\TenAgorot.aspx" />
+    <Content Include="Pages\TenShekels.aspx" />
+    <Content Include="Pages\TwentyShekels.aspx" />
+    <Content Include="Pages\TwoHundredShekels.aspx" />
+    <Content Include="Pages\TwoShekels.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Mpage.Master.cs">
+      <DependentUpon>Mpage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mpage.Master.designer.cs">
+      <DependentUpon>Mpage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Coins.aspx.cs">
+      <DependentUpon>Coins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Coins.aspx.designer.cs">
+      <DependentUpon>Coins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Helper.cs" />
+    <Compile Include="Pages\CurrencyConventer.aspx.cs">
+      <DependentUpon>CurrencyConventer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CurrencyConventer.aspx.designer.cs">
+      <DependentUpon>CurrencyConventer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FiftyShekels.aspx.cs">
+      <DependentUpon>FiftyShekels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\FiftyShekels.aspx.designer.cs">
+      <DependentUpon>FiftyShekels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FiveShekels.aspx.cs">
+      <DependentUpon>FiveShekels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\FiveShekels.aspx.designer.cs">
+      <DependentUpon>FiveShekels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GeneralKnowledgeCoins.aspx.cs">
+      <DependentUpon>GeneralKnowledgeCoins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GeneralKnowledgeCoins.aspx.designer.cs">
+      <DependentUpon>GeneralKnowledgeCoins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GeneralKnowledgeNotes.aspx.cs">
+      <DependentUpon>GeneralKnowledgeNotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GeneralKnowledgeNotes.aspx.designer.cs">
+      <DependentUpon>GeneralKnowledgeNotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HalfShekel.aspx.cs">
+      <DependentUpon>HalfShekel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HalfShekel.aspx.designer.cs">
+      <DependentUpon>HalfShekel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HundredShekels.aspx.cs">
+      <DependentUpon>HundredShekels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HundredShekels.aspx.designer.cs">
+      <DependentUpon>HundredShekels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NoAccess.aspx.cs">
+      <DependentUpon>NoAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NoAccess.aspx.designer.cs">
+      <DependentUpon>NoAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Notes.aspx.cs">
+      <DependentUpon>Notes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Notes.aspx.designer.cs">
+      <DependentUpon>Notes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OneShekel.aspx.cs">
+      <DependentUpon>OneShekel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OneShekel.aspx.designer.cs">
+      <DependentUpon>OneShekel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Open.aspx.cs">
+      <DependentUpon>Open.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Open.aspx.designer.cs">
+      <DependentUpon>Open.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TenAgorot.aspx.cs">
+      <DependentUpon>TenAgorot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TenAgorot.aspx.designer.cs">
+      <DependentUpon>TenAgorot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TenShekels.aspx.cs">
+      <DependentUpon>TenShekels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TenShekels.aspx.designer.cs">
+      <DependentUpon>TenShekels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TwentyShekels.aspx.cs">
+      <DependentUpon>TwentyShekels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TwentyShekels.aspx.designer.cs">
+      <DependentUpon>TwentyShekels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TwoHundredShekels.aspx.cs">
+      <DependentUpon>TwoHundredShekels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TwoHundredShekels.aspx.designer.cs">
+      <DependentUpon>TwoHundredShekels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TwoShekels.aspx.cs">
+      <DependentUpon>TwoShekels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TwoShekels.aspx.designer.cs">
+      <DependentUpon>TwoShekels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mpage.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52682</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44355/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
